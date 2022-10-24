@@ -21,7 +21,7 @@ body:
     id: contact
     attributes:
       label: Contact Details
-      description: How can we get in touch with you if we need more info?
+      description: __OPTIONAL__ How could we get in touch with you if we need more info (besides this issue)?
       placeholder: ex. email@example.com, discordname, twitter, ...
     validations:
       required: false
