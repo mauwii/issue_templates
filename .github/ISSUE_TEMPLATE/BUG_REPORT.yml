@@ -42,6 +42,13 @@ body:
         - 'mps'
         - 'cpu'
 
+  - type: input
+    id: vram
+    attributes:
+      label: VRAM
+      description: Size of the VRAM if known
+      placeholder: 8GB
+
   - type: dropdown
     id: os_dropdown
     attributes:
@@ -53,22 +60,6 @@ body:
         - 'Windows'
         - 'macOS'
 
-  - type: input
-    id: vram
-    attributes:
-      label: VRAM
-      description: Size of the VRAM if known
-      placeholder: 8GB
-
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: __OPTIONAL__ How can we get in touch with you if we need more info (besides this issue)?
-      placeholder: ex. email@example.com, discordname, twitter, ...
-    validations:
-      required: false
-
   - type: textarea
     id: what-happened
     attributes:
@@ -79,3 +70,12 @@ body:
       placeholder: When using the webinterface and right-clicking on button X instead of the popup-menu there error Y appears
     validations:
       required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: __OPTIONAL__ How can we get in touch with you if we need more info (besides this issue)?
+      placeholder: ex. email@example.com, discordname, twitter, ...
+    validations:
+      required: false
