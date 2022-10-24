@@ -30,6 +30,6 @@ body:
     attributes:
       label: What should this feature add?
       description: Please try to explain the functionality this feature should add
-      placeholder: Instead of one huge textfield, it would be nice to have forms for bug-reports, feature-requests, ...
+      placeholder: Instead of one huge textfield, it would be nice to have forms for bug-reports, feature-requests, ... Great benefits with automatic labeling, assigning and other functionalitys not available in that form via old-fashioned markdown-templates.
     validations:
       required: true
