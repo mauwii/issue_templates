@@ -1,0 +1,81 @@
+name: 🐞 Bug Report
+
+description: File a bug report
+
+title: '[bug]: '
+
+labels: ['bug']
+
+# assignees:
+#   - moderator_bot
+#   - lstein
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this Bug Report!
+
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: |
+        Please use the [search function](https://github.com/invoke-ai/InvokeAI/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+        irst to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: markdown
+    attributes:
+      value: __Describe your environment__
+
+  - type: dropdown
+    id: gpu_dropdown
+    attributes:
+      label: GPU
+      description: Which kind of Graphic-Adapter is your System using
+      multiple: false
+      options:
+        - 'cuda'
+        - 'amd'
+        - 'mps'
+        - 'cpu'
+
+  - type: dropdown
+    id: os_dropdown
+    attributes:
+      label: OS
+      description: Which operating System did you use when the bug occured
+      multiple: false
+      options:
+        - 'Linux'
+        - 'Windows'
+        - 'macOS'
+
+  - type: input
+    id: vram
+    attributes:
+      label: VRAM
+      description: Size of the VRAM if known
+      placeholder: 8GB
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: __OPTIONAL__ How can we get in touch with you if we need more info (besides this issue)?
+      placeholder: ex. email@example.com, discordname, twitter, ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: |
+        Briefly describe what happened, what you expected to happen and how to reproduce this bug.
+        Also add Screenshots to help describe your problem if applicable or any other additional content
+      placeholder: When using the webinterface and right-clicking on button X instead of the popup-menu there error Y appears
+    validations:
+      required: true
